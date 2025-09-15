@@ -5,35 +5,40 @@ namespace InMemoryRepositories;
 
 public class CommentInMemoryRepository : ICommentRepository
 {
-    public List<Comment>? comments { get; set; }
+    public List<Comment>? Comments { get; set; }
+
+    public CommentInMemoryRepository()
+    {
+        Comments = new List<Comment>(10);
+    }
     public Task<Comment> AddAsync(Comment comment)
     {
-        comment.Id = comments.Any()
-        ? comments.Max(c => c.Id) + 1
+        comment.Id = Comments.Any()
+        ? Comments.Max(c => c.Id) + 1
         : 1;
-        comments.Add(comment);
+        Comments.Add(comment);
         return Task.FromResult(comment);
     }
 
     public Task DeleteAsync(int id)
     {
-        Comment? CommentToRemove = comments.SingleOrDefault(c => c.Id == id);
+        Comment? CommentToRemove = Comments.SingleOrDefault(c => c.Id == id);
         if (CommentToRemove is null)
         {
             throw new InvalidOperationException($"Comment with ID '{id}' not found");
         }
-        comments.Remove(CommentToRemove);
+        Comments.Remove(CommentToRemove);
         return Task.CompletedTask;
     }
 
     public IQueryable<Comment> GetManyAsync()
     {
-        return comments.AsQueryable();
+        return Comments.AsQueryable();
     }
 
     public Task<Comment> GetSingleAsync(int id)
     {
-        Comment? givenComment = comments.SingleOrDefault(c => c.Id == id);
+        Comment? givenComment = Comments.SingleOrDefault(c => c.Id == id);
         if (givenComment is null)
         {
             throw new InvalidOperationException($"Comment with ID '{id}' not found");
@@ -43,13 +48,13 @@ public class CommentInMemoryRepository : ICommentRepository
 
     public Task UpdateAsync(Comment comment)
     {
-        Comment? existingComment = comments.SingleOrDefault(c => c.Id == comment.Id);
+        Comment? existingComment = Comments.SingleOrDefault(c => c.Id == comment.Id);
         if (existingComment is null)
         {
             throw new InvalidOperationException($"Post with ID '{comment.Id} ain't found");
         }
-        comments.Remove(existingComment);
-        comments.Add(comment);
+        Comments.Remove(existingComment);
+        Comments.Add(comment);
         return Task.CompletedTask;
     }
 }

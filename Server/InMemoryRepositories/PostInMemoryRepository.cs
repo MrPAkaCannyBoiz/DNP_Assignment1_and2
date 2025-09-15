@@ -8,6 +8,11 @@ public class PostInMemoryRepository : IPostRepository
 {
 
     public List<Post>? Posts { get; set;}
+
+    public PostInMemoryRepository()
+    {
+        Posts = new List<Post>(10);
+    }
     public Task<Post> AddAsync(Post post)
     {
         post.Id = Posts.Any()

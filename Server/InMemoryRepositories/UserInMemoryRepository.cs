@@ -4,7 +4,13 @@ namespace InMemoryRepositories;
 
 public class UserInMemoryRepository : IUserRepository
 {
-    public List<User>? Users { get; set; }
+    public List<User> Users { get; set; }
+
+    public UserInMemoryRepository()
+    {
+        Users = new List<User>(10);
+    }
+
     public Task<User> AddAsync(User user)
     {
         user.Id = Users.Any()
