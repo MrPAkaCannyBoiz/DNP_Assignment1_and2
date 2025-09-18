@@ -3,12 +3,12 @@ using CLI.UI.ManageComment;
 using CLI.UI.ManagePosts;
 using CLI.UI.ManageUsers;
 using Entities;
-using InMemoryRepositories;
+using FileRepositories;
 
 Console.WriteLine("Starting CLI app...");
-IUserRepository userRepository = new UserInMemoryRepository();
-ICommentRepository commentRepository = new CommentInMemoryRepository();
-IPostRepository postRepository = new PostInMemoryRepository();
+IUserRepository userRepository = new UserFileRepository();
+ICommentRepository commentRepository = new CommentFileRepository();
+IPostRepository postRepository = new PostFileRepository();
 
 Cliapp cliapp = new Cliapp(userRepository, commentRepository, postRepository);
 

@@ -8,8 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\FileRepositories\FileRepositories.csproj" />
     <ProjectReference Include="..\..\..\Server\Entities\Entities.csproj" />
-    <ProjectReference Include="..\..\..\Server\InMemoryRepositories\InMemoryRepositories.csproj" />
     <ProjectReference Include="..\..\..\Server\RepositoryContract\RepositoryContract.csproj" />
   </ItemGroup>
 

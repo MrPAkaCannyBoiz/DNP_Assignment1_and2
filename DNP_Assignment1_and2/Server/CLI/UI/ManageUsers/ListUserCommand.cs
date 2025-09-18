@@ -14,12 +14,11 @@ namespace CLI.UI.ManageUsers
         }
     public async Task ListUsers()
         {
-        IQueryable<User> users = userRepository.GetManyAsync();
+            IQueryable<User> users = userRepository.GetManyAsync();
             Console.WriteLine("\n__All users list below here__");
             foreach (var user in users)
             {
                Console.WriteLine($"ID: {user.Id}, Username: {user.UserName}");
-               Console.WriteLine();
             }
         }
     }

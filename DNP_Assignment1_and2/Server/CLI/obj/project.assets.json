@@ -12,7 +12,7 @@
           "bin/placeholder/Entities.dll": {}
         }
       },
-      "InMemoryRepositories/1.0.0": {
+      "FileRepositories/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
@@ -20,10 +20,10 @@
           "RepositoryContract": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/InMemoryRepositories.dll": {}
+          "bin/placeholder/FileRepositories.dll": {}
         },
         "runtime": {
-          "bin/placeholder/InMemoryRepositories.dll": {}
+          "bin/placeholder/FileRepositories.dll": {}
         }
       },
       "RepositoryContract/1.0.0": {
@@ -47,10 +47,10 @@
       "path": "../../../Server/Entities/Entities.csproj",
       "msbuildProject": "../../../Server/Entities/Entities.csproj"
     },
-    "InMemoryRepositories/1.0.0": {
+    "FileRepositories/1.0.0": {
       "type": "project",
-      "path": "../../../Server/InMemoryRepositories/InMemoryRepositories.csproj",
-      "msbuildProject": "../../../Server/InMemoryRepositories/InMemoryRepositories.csproj"
+      "path": "../../../FileRepositories/FileRepositories.csproj",
+      "msbuildProject": "../../../FileRepositories/FileRepositories.csproj"
     },
     "RepositoryContract/1.0.0": {
       "type": "project",
@@ -61,7 +61,7 @@
   "projectFileDependencyGroups": {
     "net10.0": [
       "Entities >= 1.0.0",
-      "InMemoryRepositories >= 1.0.0",
+      "FileRepositories >= 1.0.0",
       "RepositoryContract >= 1.0.0"
     ]
   },
@@ -97,11 +97,11 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "projectReferences": {
+            "C:\\VIA_uni_stuffs\\Semester3_hetero_system\\DNP1\\Assignment\\FirstAssignmentProject\\DNP_Assignment1_and2\\FileRepositories\\FileRepositories.csproj": {
+              "projectPath": "C:\\VIA_uni_stuffs\\Semester3_hetero_system\\DNP1\\Assignment\\FirstAssignmentProject\\DNP_Assignment1_and2\\FileRepositories\\FileRepositories.csproj"
+            },
             "C:\\VIA_uni_stuffs\\Semester3_hetero_system\\DNP1\\Assignment\\FirstAssignmentProject\\DNP_Assignment1_and2\\Server\\Entities\\Entities.csproj": {
               "projectPath": "C:\\VIA_uni_stuffs\\Semester3_hetero_system\\DNP1\\Assignment\\FirstAssignmentProject\\DNP_Assignment1_and2\\Server\\Entities\\Entities.csproj"
-            },
-            "C:\\VIA_uni_stuffs\\Semester3_hetero_system\\DNP1\\Assignment\\FirstAssignmentProject\\DNP_Assignment1_and2\\Server\\InMemoryRepositories\\InMemoryRepositories.csproj": {
-              "projectPath": "C:\\VIA_uni_stuffs\\Semester3_hetero_system\\DNP1\\Assignment\\FirstAssignmentProject\\DNP_Assignment1_and2\\Server\\InMemoryRepositories\\InMemoryRepositories.csproj"
             },
             "C:\\VIA_uni_stuffs\\Semester3_hetero_system\\DNP1\\Assignment\\FirstAssignmentProject\\DNP_Assignment1_and2\\Server\\RepositoryContract\\RepositoryContract.csproj": {
               "projectPath": "C:\\VIA_uni_stuffs\\Semester3_hetero_system\\DNP1\\Assignment\\FirstAssignmentProject\\DNP_Assignment1_and2\\Server\\RepositoryContract\\RepositoryContract.csproj"
