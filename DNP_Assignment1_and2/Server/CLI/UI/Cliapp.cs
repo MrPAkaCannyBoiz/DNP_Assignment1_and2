@@ -3,6 +3,7 @@ using CLI.UI.ManageComment;
 using CLI.UI.ManagePosts;
 using CLI.UI.ManageUsers;
 using Entities;
+using FileRepositories;
 
 namespace CLI.UI;
 
@@ -28,6 +29,7 @@ public class Cliapp
     private readonly CreateCommentView _createCommentView;
     private readonly ShowOneCommentCommand _showOneCommentCommand;
     private readonly ShowAllCommentsInOnePostCommand _showAllCommentsInOnePostCommand;
+    private readonly UpdateCommentCommand _updateCommentCommand;
 
 
     private bool MainMenuActive = true;
@@ -55,6 +57,8 @@ public class Cliapp
 
         this._createCommentView = new(CommentInMemoryRepository);
         this._showOneCommentCommand = new(CommentInMemoryRepository);
+        this._showAllCommentsInOnePostCommand = new(CommentInMemoryRepository, PostInMemoryRepository);
+        this._updateCommentCommand = new(CommentInMemoryRepository);
         this._showAllCommentsInOnePostCommand = new(CommentInMemoryRepository, PostInMemoryRepository);
     }
 
@@ -189,7 +193,9 @@ public class Cliapp
             System.Console.WriteLine("""
                             _Comment_Manager_View
                             - Press 1 to Create new Comment
+                            - Press 2 to Show all Comments in one Post
                             - Press 3 to Show one Comment by ID
+                            - Press 5 to Update a Comment by ID
                             - Press 0 to Go back to Main menu
                             """);
             string? input = Console.ReadLine();
@@ -207,6 +213,12 @@ public class Cliapp
                         break;
                     case "3":
                         await _showOneCommentCommand.ShowOneCommentById();
+                        break;
+                    case "2":
+                        await _showAllCommentsInOnePostCommand.Execute();
+                        break;
+                    case "5":
+                        await _updateCommentCommand.Execute();
                         break;
                 }
         }

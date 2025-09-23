@@ -92,7 +92,7 @@ namespace FileRepositories
             users.Add(user);
             // serialize back to json and save to file after update user
             userAsJson = JsonSerializer.Serialize(users);
-            await File.WriteAllTextAsync(userAsJson, _filePath);
+            await File.WriteAllTextAsync(_filePath, userAsJson);
         }
     }
 }

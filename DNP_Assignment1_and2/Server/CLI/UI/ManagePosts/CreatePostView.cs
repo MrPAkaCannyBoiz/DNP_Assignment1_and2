@@ -28,7 +28,7 @@ public class CreatePostView
                 {
                     Console.WriteLine("Create Post action cancelled.");
                     _active = false;
-                    return;
+                    break;
                 }
                 else if (!int.TryParse(input, out _))
                 {
@@ -40,6 +40,7 @@ public class CreatePostView
                     break;
                 }  
             }
+            if (!_active) break;
             Console.WriteLine("Write your Post Title down");
             string? titleInput = Console.ReadLine();
             CancelCreatePostIfInputIsN(titleInput);

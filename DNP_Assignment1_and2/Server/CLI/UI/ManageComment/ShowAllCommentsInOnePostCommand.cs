@@ -23,7 +23,7 @@ namespace CLI.UI.ManageComment
             {
                 Console.WriteLine("Write down the Post ID (press 'h' to list all exist post with ID) ");
                 var input = Console.ReadLine();
-                if (!string.IsNullOrEmpty(input) || !Int32.TryParse(input, out _)
+                if (string.IsNullOrEmpty(input)
                     && (input is not "h" || input is not "n"))
                 {
                     Console.WriteLine("Invaild input, only whole number allowed");
