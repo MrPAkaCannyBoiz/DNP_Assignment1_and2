@@ -4,3 +4,35 @@ GET {{WebAPI_HostAddress}}/weatherforecast/
 Accept: application/json
 
 ###
+
+GET {{WebAPI_HostAddress}}/users
+Accept: application/json
+
+###
+
+POST {{WebAPI_HostAddress}}/users
+Content-Type: application/json
+{
+    "UserName": "Mimi",
+    "PassWord": "mimi1234"
+}
+###
+POST {{WebAPI_HostAddress}}/users
+Content-Type: application/json
+{
+    "UserName": "Uwu",
+    "PassWord": "uwu5678"
+}
+###
+
+PUT {{WebAPI_HostAddress}}/users
+Content-Type: application/json
+{
+    "UserId": "3",
+    "UserName": "uwu8765"
+}
+
+###
+DELETE {{WebAPI_HostAddress}}/users/2
+
+###

@@ -32,3 +32,12 @@ C:\VIA_uni_stuffs\Semester3_hetero_system\DNP1\Assignment\FirstAssignmentProject
 C:\VIA_uni_stuffs\Semester3_hetero_system\DNP1\Assignment\FirstAssignmentProject\DNP_Assignment1_and2\WebAPI\obj\Debug\net10.0\WebAPI.pdb
 C:\VIA_uni_stuffs\Semester3_hetero_system\DNP1\Assignment\FirstAssignmentProject\DNP_Assignment1_and2\WebAPI\obj\Debug\net10.0\WebAPI.genruntimeconfig.cache
 C:\VIA_uni_stuffs\Semester3_hetero_system\DNP1\Assignment\FirstAssignmentProject\DNP_Assignment1_and2\WebAPI\obj\Debug\net10.0\ref\WebAPI.dll
+C:\VIA_uni_stuffs\Semester3_hetero_system\DNP1\Assignment\FirstAssignmentProject\DNP_Assignment1_and2\WebAPI\bin\Debug\net10.0\ApiContracts.dll
+C:\VIA_uni_stuffs\Semester3_hetero_system\DNP1\Assignment\FirstAssignmentProject\DNP_Assignment1_and2\WebAPI\bin\Debug\net10.0\Entities.dll
+C:\VIA_uni_stuffs\Semester3_hetero_system\DNP1\Assignment\FirstAssignmentProject\DNP_Assignment1_and2\WebAPI\bin\Debug\net10.0\FileRepositories.dll
+C:\VIA_uni_stuffs\Semester3_hetero_system\DNP1\Assignment\FirstAssignmentProject\DNP_Assignment1_and2\WebAPI\bin\Debug\net10.0\RepositoryContract.dll
+C:\VIA_uni_stuffs\Semester3_hetero_system\DNP1\Assignment\FirstAssignmentProject\DNP_Assignment1_and2\WebAPI\bin\Debug\net10.0\ApiContracts.pdb
+C:\VIA_uni_stuffs\Semester3_hetero_system\DNP1\Assignment\FirstAssignmentProject\DNP_Assignment1_and2\WebAPI\bin\Debug\net10.0\FileRepositories.pdb
+C:\VIA_uni_stuffs\Semester3_hetero_system\DNP1\Assignment\FirstAssignmentProject\DNP_Assignment1_and2\WebAPI\bin\Debug\net10.0\Entities.pdb
+C:\VIA_uni_stuffs\Semester3_hetero_system\DNP1\Assignment\FirstAssignmentProject\DNP_Assignment1_and2\WebAPI\bin\Debug\net10.0\RepositoryContract.pdb
+C:\VIA_uni_stuffs\Semester3_hetero_system\DNP1\Assignment\FirstAssignmentProject\DNP_Assignment1_and2\WebAPI\bin\Debug\net10.0\users.json
