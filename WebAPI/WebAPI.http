@@ -31,8 +31,36 @@ Content-Type: application/json
     "UserId": "3",
     "UserName": "uwu8765"
 }
+###
+PATCH {{WebAPI_HostAddress}}/users/updatepass/4
+Content-Type: application/json
+{
+    "PassWord": "mimi0000"
+}
+###
+PATCH {{WebAPI_HostAddress}}/users/updateusername/3
+Content-Type: application/json
+{
+    "UserName": "NotUwu"
+}
+###
 
 ###
 DELETE {{WebAPI_HostAddress}}/users/2
 
 ###
+
+// post new user
+
+GET {{WebAPI_HostAddress}}/posts
+Accept: application/json
+###
+GET {{WebAPI_HostAddress}}/posts/2
+Accept: application/json
+###
+PUT {{WebAPI_HostAddress}}/posts/2
+Content-Type: application/json
+{
+    "Title": "changed",
+    "Body": "yesyes"
+}

@@ -1,4 +1,4 @@
-﻿namespace WebAPI.Model;
+﻿namespace WebAPI.Model.Dto.UserDto;
 
 public class CreateUserDto
 {

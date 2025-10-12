@@ -3,52 +3,40 @@
   "WorkspaceRootPath": "C:\\VIA_uni_stuffs\\Semester3_hetero_system\\DNP1\\Assignment\\FirstAssignmentProject\\DNP_Assignment1_and2\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D4192929-A5DD-4E5F-897F-85E20683E9CA}|Server\\RepositoryContract\\RepositoryContract.csproj|c:\\via_uni_stuffs\\semester3_hetero_system\\dnp1\\assignment\\firstassignmentproject\\dnp_assignment1_and2\\server\\repositorycontract\\dto\\commentdto\\createcommentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4192929-A5DD-4E5F-897F-85E20683E9CA}|Server\\RepositoryContract\\RepositoryContract.csproj|solutionrelative:server\\repositorycontract\\dto\\commentdto\\createcommentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF5F4CC6-4697-4739-8FBC-E4653FC6ED7F}|WebAPI\\WebAPI.csproj|c:\\via_uni_stuffs\\semester3_hetero_system\\dnp1\\assignment\\firstassignmentproject\\dnp_assignment1_and2\\webapi\\controllers\\postscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF5F4CC6-4697-4739-8FBC-E4653FC6ED7F}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\postscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4192929-A5DD-4E5F-897F-85E20683E9CA}|Server\\RepositoryContract\\RepositoryContract.csproj|c:\\via_uni_stuffs\\semester3_hetero_system\\dnp1\\assignment\\firstassignmentproject\\dnp_assignment1_and2\\server\\repositorycontract\\dto\\postdto\\createpostdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4192929-A5DD-4E5F-897F-85E20683E9CA}|Server\\RepositoryContract\\RepositoryContract.csproj|solutionrelative:server\\repositorycontract\\dto\\postdto\\createpostdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4192929-A5DD-4E5F-897F-85E20683E9CA}|Server\\RepositoryContract\\RepositoryContract.csproj|c:\\via_uni_stuffs\\semester3_hetero_system\\dnp1\\assignment\\firstassignmentproject\\dnp_assignment1_and2\\server\\repositorycontract\\dto\\postdto\\updatepostdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4192929-A5DD-4E5F-897F-85E20683E9CA}|Server\\RepositoryContract\\RepositoryContract.csproj|solutionrelative:server\\repositorycontract\\dto\\postdto\\updatepostdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF5F4CC6-4697-4739-8FBC-E4653FC6ED7F}|WebAPI\\WebAPI.csproj|c:\\via_uni_stuffs\\semester3_hetero_system\\dnp1\\assignment\\firstassignmentproject\\dnp_assignment1_and2\\webapi\\webapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{CF5F4CC6-4697-4739-8FBC-E4653FC6ED7F}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\webapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CF5F4CC6-4697-4739-8FBC-E4653FC6ED7F}|WebAPI\\WebAPI.csproj|c:\\via_uni_stuffs\\semester3_hetero_system\\dnp1\\assignment\\firstassignmentproject\\dnp_assignment1_and2\\webapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CF5F4CC6-4697-4739-8FBC-E4653FC6ED7F}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CF5F4CC6-4697-4739-8FBC-E4653FC6ED7F}|WebAPI\\WebAPI.csproj|c:\\via_uni_stuffs\\semester3_hetero_system\\dnp1\\assignment\\firstassignmentproject\\dnp_assignment1_and2\\webapi\\model\\updateuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CF5F4CC6-4697-4739-8FBC-E4653FC6ED7F}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\model\\updateuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CF5F4CC6-4697-4739-8FBC-E4653FC6ED7F}|WebAPI\\WebAPI.csproj|c:\\via_uni_stuffs\\semester3_hetero_system\\dnp1\\assignment\\firstassignmentproject\\dnp_assignment1_and2\\webapi\\model\\deleteuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CF5F4CC6-4697-4739-8FBC-E4653FC6ED7F}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\model\\deleteuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CF5F4CC6-4697-4739-8FBC-E4653FC6ED7F}|WebAPI\\WebAPI.csproj|c:\\via_uni_stuffs\\semester3_hetero_system\\dnp1\\assignment\\firstassignmentproject\\dnp_assignment1_and2\\webapi\\model\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CF5F4CC6-4697-4739-8FBC-E4653FC6ED7F}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\model\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CF5F4CC6-4697-4739-8FBC-E4653FC6ED7F}|WebAPI\\WebAPI.csproj|c:\\via_uni_stuffs\\semester3_hetero_system\\dnp1\\assignment\\firstassignmentproject\\dnp_assignment1_and2\\webapi\\model\\createuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CF5F4CC6-4697-4739-8FBC-E4653FC6ED7F}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\model\\createuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D4192929-A5DD-4E5F-897F-85E20683E9CA}|Server\\RepositoryContract\\RepositoryContract.csproj|c:\\via_uni_stuffs\\semester3_hetero_system\\dnp1\\assignment\\firstassignmentproject\\dnp_assignment1_and2\\server\\repositorycontract\\repositorycontract.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{D4192929-A5DD-4E5F-897F-85E20683E9CA}|Server\\RepositoryContract\\RepositoryContract.csproj|solutionrelative:server\\repositorycontract\\repositorycontract.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CF5F4CC6-4697-4739-8FBC-E4653FC6ED7F}|WebAPI\\WebAPI.csproj|c:\\via_uni_stuffs\\semester3_hetero_system\\dnp1\\assignment\\firstassignmentproject\\dnp_assignment1_and2\\webapi\\webapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
       "RelativeMoniker": "D:0:0:{CF5F4CC6-4697-4739-8FBC-E4653FC6ED7F}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\webapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4A50CC6B-35E4-4B2F-BDE6-1BEA043FC3C1}|FileRepositories\\FileRepositories.csproj|c:\\via_uni_stuffs\\semester3_hetero_system\\dnp1\\assignment\\firstassignmentproject\\dnp_assignment1_and2\\filerepositories\\userfilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A50CC6B-35E4-4B2F-BDE6-1BEA043FC3C1}|FileRepositories\\FileRepositories.csproj|solutionrelative:filerepositories\\userfilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{452CC45E-2B31-4209-A7CE-D69B85504C22}|DNP_Assignment1_and2\\Server\\CLI\\CLI.csproj|c:\\via_uni_stuffs\\semester3_hetero_system\\dnp1\\assignment\\firstassignmentproject\\dnp_assignment1_and2\\dnp_assignment1_and2\\server\\cli\\ui\\manageusers\\updateusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{452CC45E-2B31-4209-A7CE-D69B85504C22}|DNP_Assignment1_and2\\Server\\CLI\\CLI.csproj|solutionrelative:dnp_assignment1_and2\\server\\cli\\ui\\manageusers\\updateusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{452CC45E-2B31-4209-A7CE-D69B85504C22}|DNP_Assignment1_and2\\Server\\CLI\\CLI.csproj|c:\\via_uni_stuffs\\semester3_hetero_system\\dnp1\\assignment\\firstassignmentproject\\dnp_assignment1_and2\\dnp_assignment1_and2\\server\\cli\\ui\\managecomment\\showallcommentsinonepostcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{452CC45E-2B31-4209-A7CE-D69B85504C22}|DNP_Assignment1_and2\\Server\\CLI\\CLI.csproj|solutionrelative:dnp_assignment1_and2\\server\\cli\\ui\\managecomment\\showallcommentsinonepostcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CF5F4CC6-4697-4739-8FBC-E4653FC6ED7F}|WebAPI\\WebAPI.csproj|c:\\via_uni_stuffs\\semester3_hetero_system\\dnp1\\assignment\\firstassignmentproject\\dnp_assignment1_and2\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CF5F4CC6-4697-4739-8FBC-E4653FC6ED7F}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{452CC45E-2B31-4209-A7CE-D69B85504C22}|DNP_Assignment1_and2\\Server\\CLI\\CLI.csproj|c:\\via_uni_stuffs\\semester3_hetero_system\\dnp1\\assignment\\firstassignmentproject\\dnp_assignment1_and2\\dnp_assignment1_and2\\server\\cli\\ui\\managecomment\\showonecommentcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{452CC45E-2B31-4209-A7CE-D69B85504C22}|DNP_Assignment1_and2\\Server\\CLI\\CLI.csproj|solutionrelative:dnp_assignment1_and2\\server\\cli\\ui\\managecomment\\showonecommentcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CF5F4CC6-4697-4739-8FBC-E4653FC6ED7F}|WebAPI\\WebAPI.csproj|c:\\via_uni_stuffs\\semester3_hetero_system\\dnp1\\assignment\\firstassignmentproject\\dnp_assignment1_and2\\webapi\\webapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{CF5F4CC6-4697-4739-8FBC-E4653FC6ED7F}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\webapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -74,159 +62,117 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UpdateUserDto.cs",
-              "DocumentMoniker": "C:\\VIA_uni_stuffs\\Semester3_hetero_system\\DNP1\\Assignment\\FirstAssignmentProject\\DNP_Assignment1_and2\\WebAPI\\Model\\UpdateUserDto.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Model\\UpdateUserDto.cs",
-              "ToolTip": "C:\\VIA_uni_stuffs\\Semester3_hetero_system\\DNP1\\Assignment\\FirstAssignmentProject\\DNP_Assignment1_and2\\WebAPI\\Model\\UpdateUserDto.cs",
-              "RelativeToolTip": "WebAPI\\Model\\UpdateUserDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAVAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "CreateCommentDto.cs",
+              "DocumentMoniker": "C:\\VIA_uni_stuffs\\Semester3_hetero_system\\DNP1\\Assignment\\FirstAssignmentProject\\DNP_Assignment1_and2\\Server\\RepositoryContract\\Dto\\CommentDto\\CreateCommentDto.cs",
+              "RelativeDocumentMoniker": "Server\\RepositoryContract\\Dto\\CommentDto\\CreateCommentDto.cs",
+              "ToolTip": "C:\\VIA_uni_stuffs\\Semester3_hetero_system\\DNP1\\Assignment\\FirstAssignmentProject\\DNP_Assignment1_and2\\Server\\RepositoryContract\\Dto\\CommentDto\\CreateCommentDto.cs",
+              "RelativeToolTip": "Server\\RepositoryContract\\Dto\\CommentDto\\CreateCommentDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-30T00:07:25.659Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DeleteUserDto.cs",
-              "DocumentMoniker": "C:\\VIA_uni_stuffs\\Semester3_hetero_system\\DNP1\\Assignment\\FirstAssignmentProject\\DNP_Assignment1_and2\\WebAPI\\Model\\DeleteUserDto.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Model\\DeleteUserDto.cs",
-              "ToolTip": "C:\\VIA_uni_stuffs\\Semester3_hetero_system\\DNP1\\Assignment\\FirstAssignmentProject\\DNP_Assignment1_and2\\WebAPI\\Model\\DeleteUserDto.cs",
-              "RelativeToolTip": "WebAPI\\Model\\DeleteUserDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-30T01:22:22.736Z",
+              "WhenOpened": "2025-10-06T09:46:06.668Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "UserDto.cs",
-              "DocumentMoniker": "C:\\VIA_uni_stuffs\\Semester3_hetero_system\\DNP1\\Assignment\\FirstAssignmentProject\\DNP_Assignment1_and2\\WebAPI\\Model\\UserDto.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Model\\UserDto.cs",
-              "ToolTip": "C:\\VIA_uni_stuffs\\Semester3_hetero_system\\DNP1\\Assignment\\FirstAssignmentProject\\DNP_Assignment1_and2\\WebAPI\\Model\\UserDto.cs",
-              "RelativeToolTip": "WebAPI\\Model\\UserDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Title": "UpdatePostDto.cs",
+              "DocumentMoniker": "C:\\VIA_uni_stuffs\\Semester3_hetero_system\\DNP1\\Assignment\\FirstAssignmentProject\\DNP_Assignment1_and2\\Server\\RepositoryContract\\Dto\\PostDto\\UpdatePostDto.cs",
+              "RelativeDocumentMoniker": "Server\\RepositoryContract\\Dto\\PostDto\\UpdatePostDto.cs",
+              "ToolTip": "C:\\VIA_uni_stuffs\\Semester3_hetero_system\\DNP1\\Assignment\\FirstAssignmentProject\\DNP_Assignment1_and2\\Server\\RepositoryContract\\Dto\\PostDto\\UpdatePostDto.cs",
+              "RelativeToolTip": "Server\\RepositoryContract\\Dto\\PostDto\\UpdatePostDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T23:56:00.181Z",
+              "WhenOpened": "2025-10-03T09:09:52.804Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CreateUserDto.cs",
-              "DocumentMoniker": "C:\\VIA_uni_stuffs\\Semester3_hetero_system\\DNP1\\Assignment\\FirstAssignmentProject\\DNP_Assignment1_and2\\WebAPI\\Model\\CreateUserDto.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Model\\CreateUserDto.cs",
-              "ToolTip": "C:\\VIA_uni_stuffs\\Semester3_hetero_system\\DNP1\\Assignment\\FirstAssignmentProject\\DNP_Assignment1_and2\\WebAPI\\Model\\CreateUserDto.cs",
-              "RelativeToolTip": "WebAPI\\Model\\CreateUserDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "CreatePostDto.cs",
+              "DocumentMoniker": "C:\\VIA_uni_stuffs\\Semester3_hetero_system\\DNP1\\Assignment\\FirstAssignmentProject\\DNP_Assignment1_and2\\Server\\RepositoryContract\\Dto\\PostDto\\CreatePostDto.cs",
+              "RelativeDocumentMoniker": "Server\\RepositoryContract\\Dto\\PostDto\\CreatePostDto.cs",
+              "ToolTip": "C:\\VIA_uni_stuffs\\Semester3_hetero_system\\DNP1\\Assignment\\FirstAssignmentProject\\DNP_Assignment1_and2\\Server\\RepositoryContract\\Dto\\PostDto\\CreatePostDto.cs",
+              "RelativeToolTip": "Server\\RepositoryContract\\Dto\\PostDto\\CreatePostDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T23:12:20.093Z",
+              "WhenOpened": "2025-10-03T09:09:29.458Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "WebAPI.http",
-              "DocumentMoniker": "C:\\VIA_uni_stuffs\\Semester3_hetero_system\\DNP1\\Assignment\\FirstAssignmentProject\\DNP_Assignment1_and2\\WebAPI\\WebAPI.http",
-              "RelativeDocumentMoniker": "WebAPI\\WebAPI.http",
-              "ToolTip": "C:\\VIA_uni_stuffs\\Semester3_hetero_system\\DNP1\\Assignment\\FirstAssignmentProject\\DNP_Assignment1_and2\\WebAPI\\WebAPI.http",
-              "RelativeToolTip": "WebAPI\\WebAPI.http",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2025-09-30T00:47:21.919Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "C:\\VIA_uni_stuffs\\Semester3_hetero_system\\DNP1\\Assignment\\FirstAssignmentProject\\DNP_Assignment1_and2\\WebAPI\\Controllers\\UsersController.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Controllers\\UsersController.cs",
-              "ToolTip": "C:\\VIA_uni_stuffs\\Semester3_hetero_system\\DNP1\\Assignment\\FirstAssignmentProject\\DNP_Assignment1_and2\\WebAPI\\Controllers\\UsersController.cs*",
-              "RelativeToolTip": "WebAPI\\Controllers\\UsersController.cs*",
-              "ViewState": "AgIAAE8AAAAAAAAAAAAUwGIAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "PostsController.cs",
+              "DocumentMoniker": "C:\\VIA_uni_stuffs\\Semester3_hetero_system\\DNP1\\Assignment\\FirstAssignmentProject\\DNP_Assignment1_and2\\WebAPI\\Controllers\\PostsController.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Controllers\\PostsController.cs",
+              "ToolTip": "C:\\VIA_uni_stuffs\\Semester3_hetero_system\\DNP1\\Assignment\\FirstAssignmentProject\\DNP_Assignment1_and2\\WebAPI\\Controllers\\PostsController.cs",
+              "RelativeToolTip": "WebAPI\\Controllers\\PostsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADoAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T23:01:03.933Z",
+              "WhenOpened": "2025-09-30T08:17:42.203Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "UserFileRepository.cs",
-              "DocumentMoniker": "C:\\VIA_uni_stuffs\\Semester3_hetero_system\\DNP1\\Assignment\\FirstAssignmentProject\\DNP_Assignment1_and2\\FileRepositories\\UserFileRepository.cs",
-              "RelativeDocumentMoniker": "FileRepositories\\UserFileRepository.cs",
-              "ToolTip": "C:\\VIA_uni_stuffs\\Semester3_hetero_system\\DNP1\\Assignment\\FirstAssignmentProject\\DNP_Assignment1_and2\\FileRepositories\\UserFileRepository.cs",
-              "RelativeToolTip": "FileRepositories\\UserFileRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFYAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-23T13:01:07.324Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\VIA_uni_stuffs\\Semester3_hetero_system\\DNP1\\Assignment\\FirstAssignmentProject\\DNP_Assignment1_and2\\WebAPI\\Program.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Program.cs",
-              "ToolTip": "C:\\VIA_uni_stuffs\\Semester3_hetero_system\\DNP1\\Assignment\\FirstAssignmentProject\\DNP_Assignment1_and2\\WebAPI\\Program.cs",
-              "RelativeToolTip": "WebAPI\\Program.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T22:51:12.796Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "WebAPI",
-              "DocumentMoniker": "C:\\VIA_uni_stuffs\\Semester3_hetero_system\\DNP1\\Assignment\\FirstAssignmentProject\\DNP_Assignment1_and2\\WebAPI\\WebAPI.csproj",
-              "RelativeDocumentMoniker": "WebAPI\\WebAPI.csproj",
-              "ToolTip": "C:\\VIA_uni_stuffs\\Semester3_hetero_system\\DNP1\\Assignment\\FirstAssignmentProject\\DNP_Assignment1_and2\\WebAPI\\WebAPI.csproj",
-              "RelativeToolTip": "WebAPI\\WebAPI.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Title": "RepositoryContract.csproj",
+              "DocumentMoniker": "C:\\VIA_uni_stuffs\\Semester3_hetero_system\\DNP1\\Assignment\\FirstAssignmentProject\\DNP_Assignment1_and2\\Server\\RepositoryContract\\RepositoryContract.csproj",
+              "RelativeDocumentMoniker": "Server\\RepositoryContract\\RepositoryContract.csproj",
+              "ToolTip": "C:\\VIA_uni_stuffs\\Semester3_hetero_system\\DNP1\\Assignment\\FirstAssignmentProject\\DNP_Assignment1_and2\\Server\\RepositoryContract\\RepositoryContract.csproj",
+              "RelativeToolTip": "Server\\RepositoryContract\\RepositoryContract.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-09-29T22:46:52.373Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-03T09:08:38.722Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "UpdateUserCommand.cs",
-              "DocumentMoniker": "C:\\VIA_uni_stuffs\\Semester3_hetero_system\\DNP1\\Assignment\\FirstAssignmentProject\\DNP_Assignment1_and2\\DNP_Assignment1_and2\\Server\\CLI\\UI\\ManageUsers\\UpdateUserCommand.cs",
-              "RelativeDocumentMoniker": "DNP_Assignment1_and2\\Server\\CLI\\UI\\ManageUsers\\UpdateUserCommand.cs",
-              "ToolTip": "C:\\VIA_uni_stuffs\\Semester3_hetero_system\\DNP1\\Assignment\\FirstAssignmentProject\\DNP_Assignment1_and2\\DNP_Assignment1_and2\\Server\\CLI\\UI\\ManageUsers\\UpdateUserCommand.cs",
-              "RelativeToolTip": "DNP_Assignment1_and2\\Server\\CLI\\UI\\ManageUsers\\UpdateUserCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Title": "WebAPI.http",
+              "DocumentMoniker": "C:\\VIA_uni_stuffs\\Semester3_hetero_system\\DNP1\\Assignment\\FirstAssignmentProject\\DNP_Assignment1_and2\\WebAPI\\WebAPI.http",
+              "RelativeDocumentMoniker": "WebAPI\\WebAPI.http",
+              "ToolTip": "C:\\VIA_uni_stuffs\\Semester3_hetero_system\\DNP1\\Assignment\\FirstAssignmentProject\\DNP_Assignment1_and2\\WebAPI\\WebAPI.http",
+              "RelativeToolTip": "WebAPI\\WebAPI.http",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAAwEEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2025-10-01T21:02:29.561Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\VIA_uni_stuffs\\Semester3_hetero_system\\DNP1\\Assignment\\FirstAssignmentProject\\DNP_Assignment1_and2\\WebAPI\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\VIA_uni_stuffs\\Semester3_hetero_system\\DNP1\\Assignment\\FirstAssignmentProject\\DNP_Assignment1_and2\\WebAPI\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "WebAPI\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAUwAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-23T12:53:57.026Z",
+              "WhenOpened": "2025-09-30T09:49:52.093Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "WebAPI.csproj",
+              "DocumentMoniker": "C:\\VIA_uni_stuffs\\Semester3_hetero_system\\DNP1\\Assignment\\FirstAssignmentProject\\DNP_Assignment1_and2\\WebAPI\\WebAPI.csproj",
+              "RelativeDocumentMoniker": "WebAPI\\WebAPI.csproj",
+              "ToolTip": "C:\\VIA_uni_stuffs\\Semester3_hetero_system\\DNP1\\Assignment\\FirstAssignmentProject\\DNP_Assignment1_and2\\WebAPI\\WebAPI.csproj",
+              "RelativeToolTip": "WebAPI\\WebAPI.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-30T08:31:49.004Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "ShowAllCommentsInOnePostCommand.cs",
-              "DocumentMoniker": "C:\\VIA_uni_stuffs\\Semester3_hetero_system\\DNP1\\Assignment\\FirstAssignmentProject\\DNP_Assignment1_and2\\DNP_Assignment1_and2\\Server\\CLI\\UI\\ManageComment\\ShowAllCommentsInOnePostCommand.cs",
-              "RelativeDocumentMoniker": "DNP_Assignment1_and2\\Server\\CLI\\UI\\ManageComment\\ShowAllCommentsInOnePostCommand.cs",
-              "ToolTip": "C:\\VIA_uni_stuffs\\Semester3_hetero_system\\DNP1\\Assignment\\FirstAssignmentProject\\DNP_Assignment1_and2\\DNP_Assignment1_and2\\Server\\CLI\\UI\\ManageComment\\ShowAllCommentsInOnePostCommand.cs",
-              "RelativeToolTip": "DNP_Assignment1_and2\\Server\\CLI\\UI\\ManageComment\\ShowAllCommentsInOnePostCommand.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAowA4AAAAJAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\VIA_uni_stuffs\\Semester3_hetero_system\\DNP1\\Assignment\\FirstAssignmentProject\\DNP_Assignment1_and2\\WebAPI\\Program.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Program.cs",
+              "ToolTip": "C:\\VIA_uni_stuffs\\Semester3_hetero_system\\DNP1\\Assignment\\FirstAssignmentProject\\DNP_Assignment1_and2\\WebAPI\\Program.cs",
+              "RelativeToolTip": "WebAPI\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-23T12:35:54.909Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ShowOneCommentCommand.cs",
-              "DocumentMoniker": "C:\\VIA_uni_stuffs\\Semester3_hetero_system\\DNP1\\Assignment\\FirstAssignmentProject\\DNP_Assignment1_and2\\DNP_Assignment1_and2\\Server\\CLI\\UI\\ManageComment\\ShowOneCommentCommand.cs",
-              "RelativeDocumentMoniker": "DNP_Assignment1_and2\\Server\\CLI\\UI\\ManageComment\\ShowOneCommentCommand.cs",
-              "ToolTip": "C:\\VIA_uni_stuffs\\Semester3_hetero_system\\DNP1\\Assignment\\FirstAssignmentProject\\DNP_Assignment1_and2\\DNP_Assignment1_and2\\Server\\CLI\\UI\\ManageComment\\ShowOneCommentCommand.cs",
-              "RelativeToolTip": "DNP_Assignment1_and2\\Server\\CLI\\UI\\ManageComment\\ShowOneCommentCommand.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBgAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-23T12:35:39.478Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-29T22:51:12.796Z"
             }
           ]
         }
