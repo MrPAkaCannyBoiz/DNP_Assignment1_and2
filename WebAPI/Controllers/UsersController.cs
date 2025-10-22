@@ -23,12 +23,20 @@ public class UsersController : ControllerBase
     [HttpGet("{id}")]
     public async Task<ActionResult<User>> GetUserById(int id)
     {
-        var user = await _userRepository.GetSingleAsync(id);
-        if (user == null)
+        try
         {
-            return NotFound();
+            var user = await _userRepository.GetSingleAsync(id);
+            if (user == null)
+            {
+                return NotFound();
+            }
+            return Ok(user);
         }
-        return Ok(user);
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex);
+            return StatusCode(500);
+        }
     }
 
     //add 

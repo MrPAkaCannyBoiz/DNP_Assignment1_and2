@@ -17,15 +17,34 @@ builder.Services.AddControllers();
 //builder.Services.AddOpenApi();
 
 // Add CORS services
+
+// Configure CORS with environment-aware policy and configuration-driven allowed origins
+var allowedOrigins = builder.Configuration.GetSection("AllowedOrigins").Get<string[]>() ?? Array.Empty<string>();
+
 builder.Services.AddCors(options =>
 {
-    options.AddDefaultPolicy(policy =>
+    options.AddPolicy("DefaultPolicy", policy =>
     {
-        policy.AllowAnyOrigin()
-              .AllowAnyHeader()
-              .AllowAnyMethod();
+        if (builder.Environment.IsDevelopment())
+        {
+            // Development: allow common local dev origins (be explicit)
+            policy.WithOrigins("http://localhost:3000", "http://localhost:5122", "https://localhost:7093")
+                  .AllowAnyHeader()
+                  .AllowAnyMethod();
+            // .AllowCredentials() // enable only if you use cookies and you list exact origins
+        }
+        else
+        {
+            // Production: only allow configured origins (do NOT AllowAnyOrigin here)
+            policy.WithOrigins(allowedOrigins)
+                  .AllowAnyHeader()
+                  .AllowAnyMethod();
+            // Use .AllowCredentials() only when required and only with explicit origins
+        }
     });
 });
+
+
 
 
 var app = builder.Build();
@@ -38,10 +57,15 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+else
+{
+    // Enforce HTTPS in non-development environments
+    app.UseHttpsRedirection();
+}
 
-app.UseCors();
+    app.UseCors("DefaultPolicy");
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
