@@ -1,0 +1,16 @@
+﻿@page "/"
+@inject NavigationManager Navigation
+<PageTitle>Home</PageTitle>
+
+<h1>DNP Forum</h1>
+
+<AuthorizeView>
+	<Authorized>
+		<h3>Hello, @context.User.Identity!.Name</h3>
+	</Authorized>
+	<NotAuthorized>
+		<h3>Please <a href="login">login</a></h3>
+	</NotAuthorized>
+</AuthorizeView>
+
+Welcome to your new app.

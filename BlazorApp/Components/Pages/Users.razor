@@ -1,0 +1,144 @@
+﻿@page "/users"
+@using BlazorApp.Services
+@using ApiContracts.Dto.UserDto
+@rendermode InteractiveServer
+@inject HttpsUserService UserService
+
+<style>
+    table th, table td {
+        padding: 10px; /* Increase this value for more space */
+    }
+</style>
+
+
+<h3>Forum: Users</h3>
+
+
+@if (users == null)
+{
+    <p>Loading users...</p>
+}
+else
+{
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>UserName</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in users)
+            {
+                <tr>
+                    <td>@user.Id</td>
+                    <td>@user.UserName</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+<h4>Add new User</h4>
+<input type="text" @bind="newUserUserName" placeholder="User Name" />
+<input type="password" @bind="newUserPassword" placeholder="Password" />
+<button @onclick="AddUser">Add</button>
+@if (createUserDto != null)
+{
+    <p>Added User: @createUserDto.UserName</p>
+}
+@if (!string.IsNullOrEmpty(addMessage))
+{
+    <p>@addMessage</p>
+}
+
+<h4>Delete User</h4>
+<input type="number" @bind="deleteId" placeholder="User Id" />
+<button @onclick="DeleteUser">Delete</button>
+@if (!string.IsNullOrEmpty(deleteMessage))
+{
+    <p>@deleteMessage</p>
+}
+
+
+
+<h4>Find User</h4>
+<input type="number" @bind="findId" placeholder="User Id" />
+<button @onclick="FindUser">Find</button>
+@if (foundUser != null)
+{
+    <p>Id: @foundUser.Id, UserName: @foundUser.UserName</p>
+}
+else if (!string.IsNullOrEmpty(findMessage))
+{
+    <p>@findMessage</p>
+}
+
+
+
+@code {
+    private IQueryable<UserDto>? users;
+    private int deleteId;
+    private string? deleteMessage;
+    private int findId;
+    private UserDto? foundUser;
+    private string? findMessage;
+	private string? addMessage;
+    private string? newUserUserName;
+	private string? newUserPassword;
+    private CreateUserDto? createUserDto;
+
+    protected override async Task OnInitializedAsync()
+    {
+        users = await UserService.GetManyAsync();
+    }
+
+    private async Task AddUser()
+    {
+        try
+        {
+            createUserDto = new CreateUserDto
+            {
+                UserName = newUserUserName!,
+                PassWord = newUserPassword!
+            };
+            var createdUser = await UserService.AddAsync(createUserDto);
+			addMessage = $"User {createdUser.UserName} added.";
+            // Refresh user list
+            users = await UserService.GetManyAsync();
+        }
+        catch (Exception ex)
+        {
+			addMessage = ex.Message;
+        }
+	}
+
+    private async Task DeleteUser()
+    {
+        try
+        {
+            await UserService.DeleteAsync(deleteId);
+            deleteMessage = $"User {deleteId} deleted.";
+            // Refresh user list
+            users = await UserService.GetManyAsync();
+        }
+        catch (Exception ex)
+        {
+            deleteMessage = ex.Message;
+        }
+    }
+
+    private async Task FindUser()
+    {
+        try
+        {
+            foundUser = await UserService.GetSingleAsync(findId);
+            findMessage = foundUser == null ? $"User {findId} not found." : null;
+        }
+        catch (Exception ex)
+        {
+            findMessage = ex.Message;
+            foundUser = null;
+        }
+    }
+}

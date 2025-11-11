@@ -1,4 +1,4 @@
-﻿namespace RepositoryContract.Dto.PostDto;
+﻿namespace ApiContracts.Dto.PostDto;
 
 public class UpdatePostDto
 {

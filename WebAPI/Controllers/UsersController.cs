@@ -1,7 +1,7 @@
-﻿using Entities;
+﻿using ApiContracts.Dto.UserDto;
+using Entities;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
-using WebAPI.Model.Dto.UserDto;
 
 namespace WebAPI.Controllers;
 [ApiController]
@@ -15,7 +15,6 @@ public class UsersController : ControllerBase
         _userRepository = userRepository;
     }
 
-    //TODO : Implement CRUD operations for User entity
     // get (both all and given id)
     [HttpGet]
     public ActionResult<IQueryable<User>> GetAllUsers() => Ok(_userRepository.GetManyAsync());

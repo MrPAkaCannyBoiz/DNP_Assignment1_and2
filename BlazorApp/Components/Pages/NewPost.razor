@@ -1,0 +1,61 @@
+﻿@page "/newpost"
+@using BlazorApp.Services
+@using ApiContracts.Dto.PostDto
+@using BlazorApp.Auth
+@rendermode InteractiveServer
+@inject HttpsPostService PostService
+@attribute [Authorize] 
+@*This page can only accessed if you login*@
+
+@code 
+{
+	private string? newPostTitle;
+	private string? newPostBody;
+	private int userIdToPost;
+	private CreatePostDto? newPostDto;
+	private string? addMessage;
+
+	[CascadingParameter] public Task<AuthenticationState> state { get; set; }
+
+	protected override async Task OnInitializedAsync()
+	{
+		AuthenticationState authenticationState = await state;
+		userIdToPost = authenticationState.GetUserId() ?? -1;
+	}
+
+	private async Task AddPost()
+	{
+		try
+		{
+			newPostDto = new()
+			{
+				Title = newPostTitle!,
+				Body = newPostBody!
+			};
+			var createdPost = await PostService.CreatePostAsync(userIdToPost,newPostDto);
+			addMessage = "Post added.";
+		}
+		catch (Exception ex)
+		{
+			addMessage = $"Error adding post: {ex.Message}";
+		}
+	}
+}
+
+<h3>Add new post</h3>
+
+<div class="mb-3">
+	<label for="titleInput" class="form-label">Title</label>
+	<input type="text" class="form-control" id="titleInput" @bind="newPostTitle" />
+	<label for="bodyInput" class="form-label mt-3">Body</label>
+	<textarea class="form-control mt-3" rows="5" placeholder="Post body" @bind="newPostBody" ></textarea>
+	<button class="btn btn-primary mt-3" @onclick="() => AddPost()">Add Post</button>
+
+	@if (!string.IsNullOrEmpty(addMessage))
+	{
+		<div class="alert alert-info mt-3" role="alert">
+			@addMessage
+		</div>
+	}
+</div>
+

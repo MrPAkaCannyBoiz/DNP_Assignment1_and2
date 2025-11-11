@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Entities;
 using System.Threading.Tasks;
-using RepositoryContract.Dto.CommentDto;
+using ApiContracts.Dto.CommentDto;
 
 namespace WebAPI.Controllers;
 
@@ -68,7 +68,7 @@ public class CommentsController : ControllerBase
 
     // create (post)
     [HttpPost("posts/{postId}/users/{userId}")]
-    public async Task<ActionResult<Comment>> Post(int postId, int userId, [FromBody] CommentDto request)
+    public async Task<ActionResult<Comment>> Post(int postId, int userId, [FromBody] DetailedCommentDto request)
     {
         try
         {
@@ -100,7 +100,8 @@ public class CommentsController : ControllerBase
 
     //update (put) : only body can be updated for comment so no patch is needed
     [HttpPut("/posts/{postId}/comments/{commentId}")] 
-    public async Task<ActionResult<Comment>> UpdateComment(int postId, int commentId, [FromBody] CommentDto request)
+    public async Task<ActionResult<Comment>> UpdateComment(int postId, int commentId
+        , [FromBody] CommentDto request)
     {
         try
         {

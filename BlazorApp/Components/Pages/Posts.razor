@@ -1,0 +1,196 @@
+﻿@page "/posts"
+<h3>Posts</h3>
+@using BlazorApp.Services
+@using ApiContracts.Dto.PostDto
+@using Microsoft.AspNetCore.Components.Authorization
+@using System.Security.Claims
+@rendermode InteractiveServer
+@inject HttpsPostService PostService
+@inject NavigationManager NavigationManager // if you need navigation to other pages use this
+
+@code
+{
+	private IQueryable<PostDto>? posts;
+	private bool showConfirmation = false;
+	private bool showDeleteConfirmationOnRow = false;
+	private int deletePostId;
+	private int findPostId;
+	private PostDto? foundPost;
+	private string? deleteMessage;
+	private string? findMessage;
+	private int userId;
+
+	[CascadingParameter] public Task<AuthenticationState> state { get; set; }
+
+	protected override async Task OnInitializedAsync()
+	{
+		posts = await PostService.GetAllPostsAsync();
+		// set userId from authentication state from login (to allow delete only by poster))
+		AuthenticationState authenticationState = await state;
+		ClaimsPrincipal claimsPrincipal = authenticationState.User;
+		if(claimsPrincipal.Identity is null || !claimsPrincipal.Identity.IsAuthenticated)
+		{
+			return; // User is not authenticated
+		}
+		string? userName = claimsPrincipal.Identity.Name;
+		IEnumerable<Claim> claims = claimsPrincipal.Claims;
+		string userIdAsString = claims.FirstOrDefault(
+			c => c.Type == ClaimTypes.NameIdentifier)!.Value ?? string.Empty;
+		userId = int.Parse(userIdAsString);
+	}
+
+	private async Task DeletePost()
+	{
+		try
+		{
+			await PostService.DeletePostAsync(deletePostId);
+			deleteMessage = $"Post with Id {deletePostId} deleted successfully.";
+			// Refresh post list (until real-time updates are implemented)
+			posts = await PostService.GetAllPostsAsync();
+		}
+		catch (Exception ex)
+		{
+			deleteMessage = $"Error deleting post: {ex.Message}";
+		}
+	}
+
+	private async Task DeletePost(int postId)
+	{
+		try
+		{
+			await PostService.DeletePostAsync(postId);
+			deleteMessage = $"Post with Id {postId} deleted successfully.";
+			// Refresh post list (until real-time updates are implemented)
+			posts = await PostService.GetAllPostsAsync();
+		}
+		catch (Exception ex)
+		{
+			deleteMessage = $"Error deleting post: {ex.Message}";
+		}
+	}
+
+	private async Task FindPost()
+	{
+		try
+		{
+			foundPost = await PostService.GetPostByIdAsync(findPostId);
+			if (foundPost == null)
+			{
+				findMessage = $"Post with Id {findPostId} not found.";
+			}
+			else
+			{
+				findMessage = null; // Clear previous messages
+			}
+		}
+		catch (Exception ex)
+		{
+			findMessage = $"Error finding post: {ex.Message}";
+		}
+	}
+
+	private void NavigateToAddPost()
+	{
+		NavigationManager.NavigateTo("/newpost");
+	}
+
+	private void NavigateToPostDetails(int postId)
+	{
+		NavigationManager.NavigateTo($"/posts/{postId}");
+	}
+
+	private void DisplayDeleteConfirmation(int postId)
+	{
+		deletePostId = postId;
+		showConfirmation = true;
+	}
+
+	private void DisplayDeleteConfirmationOnRow(int postId)
+	{
+		deletePostId = postId;
+		showDeleteConfirmationOnRow = true;
+	}
+}
+
+<style>
+	table th, table td {
+		padding: 10px; /* Increase this value for more space */
+	}
+</style>
+
+
+<h3>Forum: Posts</h3>
+ 
+@*Navigate button to add post page*@
+	<button @onclick = "() => NavigateToAddPost()" >Add New Post </button>
+
+@*List all post*@
+@if (posts == null)
+{
+	<p>Loading posts...</p>
+}
+else
+{
+@*table to show all post list*@
+	<table>
+		<thead>
+			<tr>
+				<th>Click for more info</th>
+				<th>Id</th>
+				<th>Title</th>
+				<th>Body</th>
+				<th>Post by user id</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var post in posts)
+			{
+				<tr>
+					@*lambda: if there's no event argument, better use () before =>, 
+					if there's an argument, use 'event, or 'e' before => if you need event details *@
+					<td><button @onclick = "() => NavigateToPostDetails(post.Id)"> View details</button></td>
+					<td>@post.Id</td>
+					<td>@post.Title</td>
+					<td>@post.Body</td>
+					<td>@post.UserId</td>
+					<td>
+						@*Delete post button with confirmation prompt with non boolean statement 
+							(only poster allowed) *@
+						@if (userId == post.UserId)
+						{
+							<button @onclick=" () => DisplayDeleteConfirmationOnRow(post.Id)"> Delete this post </button>
+							@if (deletePostId == post.Id && showDeleteConfirmationOnRow)
+							{
+								<p>Are you sure you want to delete post with Id @post.Id?</p>
+								<button @onclick=" () => DeletePost(post.Id)">Yes</button>
+								<button @onclick="() => showDeleteConfirmationOnRow = false">No</button>
+							}
+						}
+					</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+}
+
+@if (!string.IsNullOrEmpty(deleteMessage))
+{
+	@*Print the result*@
+	<p>@deleteMessage</p>
+}
+
+
+@*Find post via postID*@
+<h4>Find Post</h4>
+<input type="number" @bind="findPostId" placeholder="Post Id" />
+<button @onclick="FindPost">Find</button>
+@*Show the result*@
+@if (foundPost != null)
+{
+	<p>Id: @foundPost.Id, Title: @foundPost.Title, Body: @foundPost.Body, UserId: @foundPost.UserId</p>
+}
+else if (!string.IsNullOrEmpty(findMessage))
+{
+	<p>@findMessage</p>
+}
+

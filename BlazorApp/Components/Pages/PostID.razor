@@ -1,0 +1,223 @@
+﻿@page "/posts/{postId:int}"
+@using BlazorApp.Services
+@using ApiContracts.Dto.PostDto
+@using ApiContracts.Dto.CommentDto
+@using BlazorApp.Auth
+@rendermode InteractiveServer
+@inject HttpsCommentService CommentService
+@inject HttpsPostService PostService
+
+@*TODO: Edit post title (only poster able to do it)*@
+
+@code 
+{
+	[Parameter] public int postId { get; set; }
+	private PostDto? post;
+	private DetailedCommentDto? newCommentDto;
+	private string? newCommentBody;
+	private string? newCommentTitle;
+	private int newCommentUserId;
+	private IQueryable<DetailedCommentDto>? comments;
+	private string? loadMessage;
+	private string? addMessage;
+	private int commentToDeleteId;
+	private bool showDeleteConfirmation = false;
+	private string? deleteMessage;
+	private int commentToEditId;
+	private bool showEditConfirmation = false;
+	private CommentDto? commentToEditDto;
+	private string? commentToEditBody;
+	private string? editMessage;
+	private int? loggedInUserId;
+
+	[CascadingParameter] public Task<AuthenticationState> state { get; set; }
+
+	protected override async Task OnInitializedAsync()
+	{
+		try
+		{
+			post = await PostService.GetPostByIdAsync(postId);
+			await getCommentList();
+		}
+		catch (Exception ex)
+		{
+			loadMessage = $"Error loading comments for PostID {postId}: {ex.Message}";
+		}
+		AuthenticationState authenticationState = await state;
+		loggedInUserId = authenticationState.GetUserId();
+		newCommentUserId = loggedInUserId ?? -1;
+	}
+
+	private async Task getCommentList()
+	{
+		var c = await CommentService.GetManyCommentsByPostIdAsync(postId);
+		comments = c.ToList().AsQueryable();
+	}
+
+	private async Task AddComment()
+	{
+		if (newCommentUserId <= 0)
+		{
+			addMessage = "Invalid User ID. (Login error)";
+			return;
+		}
+		try
+		{
+			newCommentDto = new()
+			{
+				Body = newCommentBody!,
+				PostId = postId,
+				UserId = newCommentUserId
+			};
+			var createdComment = await CommentService.AddCommentAsync(postId, newCommentUserId, newCommentDto);
+			addMessage = $"Comment {createdComment.Id} added.";
+			// Refresh list
+			await getCommentList();
+		}
+		catch (Exception ex)
+		{
+			addMessage = ex.Message;
+		}
+	}
+
+	private void ShowAndSetEditConfirmation(int commentId)
+	{
+		commentToEditId = commentId;
+		showEditConfirmation = true;
+		editMessage = null;
+	}
+
+	private async Task EditComment(int commentId, int postIdToEdit)
+	{
+		try
+		{
+			commentToEditDto = new()
+			{
+				Body = commentToEditBody!
+			};
+			await CommentService.UpdateCommentAsync(postIdToEdit,commentId,commentToEditDto!);
+			editMessage = $"Comment {commentId} updated.";
+			// Refresh comments on button, cuz idk why 
+		}
+		catch (Exception ex)
+		{
+			editMessage = ex.Message;
+		}
+	}
+
+	private void ShowAndSetDeleteConfirmation(int commentId)
+	{
+		commentToDeleteId = commentId;
+		showDeleteConfirmation = true;
+	}
+	
+	private async Task DeleteComment(int commentId)
+	{
+		try
+		{
+			await CommentService.DeleteCommentAsync(postId, commentId);
+			deleteMessage = $"Comment {commentId} deleted.";
+			// Refresh list
+			await getCommentList();
+		}
+		catch (Exception ex)
+		{
+			deleteMessage = ex.Message;
+		}
+	}
+}
+
+@*Display the Post*@
+<h4>Post ID: @postId</h4>
+@if (post != null)
+{
+<div>
+	<h5><strong>@post.Title</strong></h5>
+	<p>@post.Body</p>
+</div>
+<h4>Comments for Post ID: @postId</h4>
+<div>
+	@if (!string.IsNullOrEmpty(loadMessage))
+	{
+		<p>@loadMessage</p>
+	}
+	@if (comments != null && comments.Any())
+	{
+		<ul>
+			@foreach (var comment in comments)
+			{
+				<li>
+					<strong>User ID: @comment.UserId</strong>
+					<p>@comment.Body</p>
+					@if (loggedInUserId == comment.UserId)
+					{
+						<button @onclick = "() => ShowAndSetEditConfirmation(comment.Id)">edit</button>
+						<button @onclick="() => ShowAndSetDeleteConfirmation(comment.Id)">delete</button>
+					}
+				</li>
+				@if (showEditConfirmation && commentToEditId == comment.Id 
+						&& loggedInUserId == comment.UserId)
+				{
+					<li>
+						<div>
+						<p>Edit Comment ID @commentToEditId:</p>
+						<p><textarea @bind="commentToEditBody">@comment.Body</textarea></p>
+						<button @onclick=" async () => 
+							{
+								await EditComment(commentToEditId, postId); 
+								showEditConfirmation = false;
+								await getCommentList(); // refresh 
+							}"> Save</button>
+						<button @onclick="() => showEditConfirmation = false">Cancel</button>
+						</div>
+					</li>
+				}
+				@if (showDeleteConfirmation && commentToDeleteId == comment.Id
+						&& loggedInUserId == comment.UserId)
+				{
+					<li>
+						<div>
+						<p>Are you sure you want to delete comment ID @commentToDeleteId?</p>
+						<button @onclick=" async () => { 
+							 await DeleteComment(commentToDeleteId); 
+							showDeleteConfirmation = false; 
+						}"> Yes
+						</button>
+						<button @onclick="() => showDeleteConfirmation = false">No</button>
+						</div>
+					</li>
+				}
+			}
+		</ul>
+	}
+	else
+	{
+		<p>No comments found for this post.</p>
+	}
+</div>
+	
+}
+else
+{
+	<p>Post not found.</p>
+}
+
+
+@*Add comment given user id (for now)*@
+<div>
+	<h4>Add new comment</h4>
+	<AuthorizeView>
+		<Authorized>
+	<p><textarea @bind="newCommentBody"></textarea></p>
+	<p><button @onclick= "()=>AddComment()">add</button></p>
+	@if (!string.IsNullOrEmpty(addMessage))
+	{
+		<p>@addMessage</p>
+	}
+		</Authorized>
+		<NotAuthorized>
+			<p> Please <a href="login">login (click here)</a> to comment</p>
+		</NotAuthorized>
+	</AuthorizeView>
+</div>
+

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace RepositoryContract.Dto.CommentDto;
+namespace ApiContracts.Dto.CommentDto;
 
 public class CommentDto
 {

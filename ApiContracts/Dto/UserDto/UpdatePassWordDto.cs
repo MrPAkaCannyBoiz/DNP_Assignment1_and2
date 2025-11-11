@@ -1,4 +1,4 @@
-﻿namespace WebAPI.Model.Dto.UserDto;
+﻿namespace ApiContracts.Dto.UserDto;
 
 public class UpdatePassWordDto
 {

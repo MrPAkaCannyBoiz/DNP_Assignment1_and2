@@ -1,6 +1,6 @@
 ﻿using System.Runtime.CompilerServices;
 
-namespace RepositoryContract.Dto.PostDto;
+namespace ApiContracts.Dto.PostDto;
 
 public class CreatePostDto
 {
