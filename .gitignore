@@ -1,5 +1,8 @@
 # Build Result
 [Bd]in/
+bin/
+obj/
+out/
 
 # Visual Studio Code caches
 .vs/
