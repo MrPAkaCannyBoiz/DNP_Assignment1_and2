@@ -54,7 +54,7 @@ public class PostsController : ControllerBase
             Console.WriteLine(ex);
             return NotFound($"Cannot find the user id {id} to create the post");
         }
-        Post newPost = new()
+        Post newPost = new(request.Title, request.Body, id)
         {
             Title = request.Title,
             Body = request.Body,
@@ -70,7 +70,7 @@ public class PostsController : ControllerBase
         try
         {
             Post? existingPost = await _postRepository.GetSingleAsync(id);
-            Post editedPost = new()
+            Post editedPost = new(existingPost.Id, request.Title, request.Body, existingPost.UserId)
             {
                 Id = existingPost.Id,
                 Title = request.Title,

@@ -45,7 +45,7 @@ public class UsersController : ControllerBase
         try
         {
             VerifyUserNameIsAvailableAsync(request.UserName);
-            User user = new()
+            User user = new(request.UserName, request.PassWord)
             {
                 UserName = request.UserName,
                 Password = request.PassWord,
@@ -79,7 +79,7 @@ public class UsersController : ControllerBase
             {
                 return NotFound();
             }
-            User user = new()
+            User user = new(existingUser.Id, request.UserName, request.PassWord)
             {
                 Id = existingUser.Id,
                 UserName = request.UserName,
@@ -113,7 +113,7 @@ public class UsersController : ControllerBase
             {
                 return NotFound();
             }
-            User user = new()
+            User user = new(existingUser.Id, request.UserName, existingUser.Password)
             {
                 Id = existingUser.Id,
                 UserName = request.UserName,
@@ -146,7 +146,7 @@ public class UsersController : ControllerBase
             {
                 return NotFound();
             }
-            User user = new()
+            User user = new(existingUser.Id, existingUser.UserName, request.NewPassword)
             {
                 Id = existingUser.Id,
                 UserName = existingUser.UserName,

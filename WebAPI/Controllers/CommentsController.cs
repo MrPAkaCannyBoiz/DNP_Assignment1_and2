@@ -82,7 +82,7 @@ public class CommentsController : ControllerBase
             {
                 return NotFound($"Cannot find the user id {userId} to create the comment");
             }
-            Comment newComment = new()
+            Comment newComment = new(request.Body, postId, userId)
             {
                 PostId = postId,
                 Body = request.Body,

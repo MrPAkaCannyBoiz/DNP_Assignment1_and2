@@ -1,3 +1,5 @@
+using EfcRepositories;
+using EfcRepositories.Repositories;
 using FileRepositories;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,9 +10,11 @@ builder.Services.AddEndpointsApiExplorer();
 //if you want to use Swagger, you need to add the following line
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddScoped<IUserRepository, UserFileRepository>();
-builder.Services.AddScoped<IPostRepository, PostFileRepository>();
-builder.Services.AddScoped<ICommentRepository, CommentFileRepository>();
+// change from FileRepositories to EfcRepositories (database-backed)
+builder.Services.AddScoped<IUserRepository, EfcUserRepository>();
+builder.Services.AddScoped<IPostRepository, EfcPostRepository>();
+builder.Services.AddScoped<ICommentRepository, EfcCommentRepository>();
+builder.Services.AddDbContext<EfcRepositories.AppContext>(); // there're 2 AppContext classes; this is the one in EfcRepositories
 
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi

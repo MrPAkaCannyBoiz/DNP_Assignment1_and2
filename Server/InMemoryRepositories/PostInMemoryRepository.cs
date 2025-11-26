@@ -4,7 +4,7 @@ using Entities;
 
 namespace InMemoryRepositories;
 
-public class PostInMemoryRepository : IPostRepository
+public class PostInMemoryRepository : IUserRepository
 {
 
     public List<Post>? Posts { get; set;}
